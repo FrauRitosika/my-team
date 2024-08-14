@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Моя команда</title>
+<script defer src="bundle.js"></script></head>
+
+<body class="page">
+    <main class="page-content">
+        <div class="page-content__main container">
+            <h1 class="page-content__title">Моя команда</h1>
+            <div class="dashboard">
+                <ul class="dashboard__list">
+                    <li class="dashboard__item">
+                        <div class="dashboard__title-container">
+                            <h2 class="dashboard__title">Обученность команды</h2>
+                            <div class="icon-info"></div>
+                        </div>
+                        <div class="dashboard__graph">
+                            <div class="training-progress-graph js-training-progress-graph">
+                                <canvas id="trainingProgressGraph" width="160" height="160"></canvas>
+                                <span class="training-progress-graph__result"></span>
+                                <div class="legend">
+                                    <h3 class="legend__title">Курсы и траектории</h3>
+                                    <ul class="legend__list js-training-progress-graph__list"> </ul>
+                                </div>
+                                <template id="statusItem">
+                    <li class="training-progress-graph__item  js-training-progress-graph__item">
+                        <span class="training-progress-graph__item-name js-training-progress-graph__item-name"></span>
+                        <span
+                            class="training-progress-graph__item-percent js-training-progress-graph__item-percent"></span>
+                        <span class="training-progress-graph__item-count js-training-progress-graph__item-count"></span>
+                    </li>
+                    </template>
+            </div>
+        </div>
+        </li>
+        <li class="dashboard__item">
+            <div class="dashboard__title-container">
+                <h2 class="dashboard__title">Прогресс сотрудников</h2>
+                <div class="icon-info"></div>
+            </div>
+            <div class="dashboard__graph">
+                <div class="employee-progress-graph js-employee-progress-graph">
+                    <canvas class="employee-progress-graph__content" id="employeeProgressGraph" width="200"
+                        height="100"></canvas>
+                    <div class="employee-progress-graph__text-container">
+                        <span class="employee-progress-graph__text">сотрудников завершили обучение</span>
+                    </div>
+                    <div class="employee-progress-graph__result">
+                        <span class="js-employee-progress__result-text"></span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="dashboard__item">
+            <h2 class="dashboard__title">Обратите внимание</h2>
+            <div class="dashboard__graph">
+                <div class="js-warnings-graph">
+                    <ul class="warnings-graph__list js-warnings-graph__list"></ul>
+                    <template id="warningItem">
+        <li class="warnings-graph__item js-warnings-item">
+            <span class="warnings-graph__item-info js-warnings-item-text"></span>
+        </li>
+        </template>
+        </div>
+        </div>
+        </li>
+        </ul>
+        </div>
+        </div>
+    </main>
+</body>
+
+</html>
