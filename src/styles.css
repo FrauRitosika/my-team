@@ -1,0 +1,250 @@
+@font-face {
+   font-family: 'Stolzl';
+   font-style: bold;
+   font-weight: 500;
+   src: local('Stolzl'),
+     url('fonts/stolzl_medium.otf') format('opentype')
+ }
+ 
+ @font-face {
+   font-family: 'Stolzl';
+   font-style: normal;
+   font-weight: 400;
+   src: local('Stolzl'),
+     url('fonts/stolzl_regular.otf') format('opentype')
+ }
+
+ @font-face {
+   font-family: 'Verdana';
+   font-style: normal;
+   font-weight: 400;
+   src: local('Verdana'),
+     url('fonts/Verdana.ttf') format('opentype')
+ }
+
+.page {
+    display: block;
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background: rgba(243, 248, 252, 1);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .page-content {
+   width: 100%;
+    max-width: 1090px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+.page-content__title {
+   margin-bottom: 24px;
+   margin-left: 40px;
+   font-family: Stolzl;
+   font-size: 1.5em;
+   font-weight: 500;
+}
+
+ .dashboard__list {
+   width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+ }
+
+ .dashboard__title-container {
+   display: flex;
+   gap: 8px;
+   text-align: center;
+ }
+
+ .dashboard__title {
+   margin: 0;
+   padding: 0;
+   font-family: 'Stolzl';
+   font-size: 1em;
+   font-weight: 500;
+ }
+
+ .dashboard__item {
+    margin: 0;
+    padding: 40px;
+    height: 280px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 4px -2px rgba(24, 39, 75, 0.04), 0px 2px 4px -2px rgba(24, 39, 75, 0.06);
+    border-radius: 40px;
+ }
+
+ .legend__title {
+   margin: 0;
+   font-family: 'Stolzl';
+   font-size: 0.875em;
+   font-weight: 500;
+   color: rgba(0, 0, 0, 1);
+ }
+
+ .legend__list {
+   --graph-color: #B6D4ED;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+ }
+
+ .training-progress-graph {
+   position: relative;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+ }
+
+ .training-progress-graph__result {
+   position: absolute;
+   top: 60px;
+   left: 44px;
+   font-weight: 400;
+   font-size: 2em;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgba(0, 0, 0, 1);
+ }
+
+ .training-progress-graph__item {
+   margin-top: 8px;
+   display: flex;
+   align-items: center;
+   width: 183px;
+   font-size: 0.875em;
+   font-weight: 400;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   line-height: 1.4;
+   color: rgba(0, 0, 0, 1);
+ }
+
+ .training-progress-graph__item::before {
+   content: '';
+   position: relative;
+   display: block;
+   margin-right: 8px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background-color: var(--graph-color);
+ }
+
+ .training-progress-graph__item-percent {
+   margin-left: auto;
+ }
+
+ .training-progress-graph__item-count {
+   margin-left: 4px;
+ }
+
+ .training-progress-graph__item-count {
+   opacity: 0.5;
+ }
+
+ .dashboard__graph {
+   margin-top: 20px;
+   width: 100%;
+ }
+
+ .employee-progress-graph {
+   width: 100%;
+   position: relative;
+ }
+
+ .employee-progress-graph__content {
+   display: block;
+   margin: 0 auto;
+ }
+
+ .employee-progress-graph__result {
+   position: absolute;
+   top: 70px;
+   left: 50%;
+   transform: translateX(-50%);
+   font-weight: 400;
+   font-size: 1.75em;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgba(0, 0, 0, 1);
+   text-align: center;
+ }
+
+ .employee-progress-graph__text {
+   font-weight: 400;
+   font-size: 0.875em;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgba(0, 0, 0, 1);
+ }
+
+ .employee-progress-graph__text-container {
+   margin-top: 10px;
+   text-align: center;
+   max-width: 186px;
+   margin: 20px auto;
+ }
+
+ .warnings-graph__list {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+ }
+
+ .warnings-graph__item-info {
+   font-weight: 400;
+   font-size: 0.75em;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgba(0, 0, 0, 1);
+ }
+
+ .warnings-graph__item {
+   margin-top: 12px;
+   display: flex;
+   gap: 6px;
+   border: rgba(231, 241, 249, 1) solid 1px;
+   border-radius: 8px;
+   padding: 4px 11px;
+ }
+
+ .warnings-graph__item::before {
+   content: '';
+   position: relative;
+   display: block;
+   background-color: rgba(236, 19, 61, 1);
+   width: 16px;
+   height: 16px;
+   border-radius: 50%;
+   background-image: url('./image/exclamation_mark.svg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 2px;
+ }
+
+ .text-info {
+   font-size: 0.875em;
+   font-weight: 400;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   line-height: 1.4;
+   color: rgba(0, 0, 0, 1);
+ }
+
+ .icon-info {
+   width: 16px;
+   height: 16px;
+   background-image: url('./image/information.svg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   cursor: pointer;
+ }
